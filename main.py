@@ -2,6 +2,7 @@ import re
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
+import datetime
 
 TEAM = "CLE"
 TEAM_NAME = "Cleveland Cavaliers"
@@ -110,7 +111,22 @@ def get_game_stats(game_url):
             gameStats["opponent"]["inactive"].append(inactive)
 
     # Attendance
-    # Time of Game
+    inactiveString = soup.find("strong", text=re.compile("Attendance:")).parent.text
+    gameStats["attendance"] = inactiveString.split("Attendance:")[1].strip()
+    # Length of Game
+    inactiveString = soup.find("strong", text=re.compile("Time of Game:")).parent.text
+    gameStats["length"] = inactiveString.split("Time of Game:")[1].strip()
+
+    box = soup.find("div", {"class": "scorebox_meta"})
+    #Time of Game 
+    gameStats["time"] = box.text.strip().split(",")[0]
+    #Date of Game
+    gameStats["date"] = box.text.strip().split(",")[1]
+    #NEED ADD REGEX FIX HERE TO GET YEAR FROM SCOREBOX
+    date = gameStats["date"].strip() + ", " + str(2020) 
+    gameStats["date"] = date
+    #Day of week
+    gameStats["dotw"] = datetime.datetime.strptime(date, '%B %d, %Y').strftime('%A')
 
     print(gameStats)
 
