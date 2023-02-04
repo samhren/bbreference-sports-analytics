@@ -1,0 +1,515 @@
+"","Season","EventName","EventDate","Section","AverageTicketPrice"
+"1","2020-21","Cavaliers vs. Memphis Grizzlies",2021-01-11 19:00:00,"Club",129.61
+"2","2020-21","Cavaliers vs. Utah Jazz",2021-01-12 19:30:00,"Club",119.45
+"3","2020-21","Cavaliers vs. New York Knicks",2021-01-15 19:30:00,"Club",145.95
+"4","2020-21","Cavaliers vs. Brooklyn Nets",2021-01-20 19:00:00,"Club",157.87
+"5","2020-21","Cavaliers vs. Brooklyn Nets",2021-01-22 19:30:00,"Club",162.18
+"6","2020-21","Cavaliers vs. Los Angeles Lakers",2021-01-25 20:00:00,"Club",208.91
+"7","2020-21","Cavaliers vs. Detroit Pistons",2021-01-27 19:00:00,"Club",117.18
+"8","2020-21","Cavaliers vs. Minnesota Timberwolves",2021-02-01 20:00:00,"Club",110.43
+"9","2020-21","Cavaliers vs. Los Angeles Clippers",2021-02-03 20:00:00,"Club",131.5
+"10","2020-21","Cavaliers vs. Milwaukee Bucks",2021-02-05 19:30:00,"Club",145.57
+"11","2020-21","Cavaliers vs. Milwaukee Bucks",2021-02-06 20:00:00,"Club",148.84
+"12","2020-21","Cavaliers vs. Denver Nuggets",2021-02-19 19:00:00,"Club",109.83
+"13","2020-21","Cavaliers vs. Oklahoma City Thunder",2021-02-21 19:00:00,"Club",98.26
+"14","2020-21","Cavaliers vs. Atlanta Hawks",2021-02-23 19:00:00,"Club",95.55
+"15","2020-21","Cavaliers vs. Houston Rockets",2021-02-24 19:30:00,"Club",100.23
+"16","2020-21","Cavaliers vs. Indiana Pacers",2021-03-03 19:00:00,"Club",114.12
+"17","2020-21","Cavaliers vs. Boston Celtics",2021-03-17 20:00:00,"Club",86.69
+"18","2020-21","Cavaliers vs. San Antonio Spurs",2021-03-19 19:30:00,"Club",91.75
+"19","2020-21","Cavaliers vs. Toronto Raptors",2021-03-21 19:00:00,"Club",87.75
+"20","2020-21","Cavaliers vs. Sacramento Kings",2021-03-22 19:30:00,"Club",96.14
+"21","2020-21","Cavaliers vs. Philadelphia 76ers",2021-04-01 19:00:00,"Club",109.24
+"22","2020-21","Cavaliers vs. Toronto Raptors",2021-04-10 19:30:00,"Club",99.09
+"23","2020-21","Cavaliers vs. New Orleans Pelicans",2021-04-11 19:00:00,"Club",115.76
+"24","2020-21","Cavaliers vs. Golden State Warriors",2021-04-15 20:00:00,"Club",116.64
+"25","2020-21","Cavaliers vs. Chicago Bulls",2021-04-21 19:00:00,"Club",94.57
+"26","2020-21","Cavaliers vs. Orlando Magic",2021-04-28 19:00:00,"Club",89.89
+"27","2020-21","Cavaliers vs. Washington Wizards",2021-04-30 19:30:00,"Club",117.47
+"28","2020-21","Cavaliers vs. Miami Heat",2021-05-01 20:00:00,"Club",125.77
+"29","2020-21","Cavaliers vs. Phoenix Suns",2021-05-04 19:00:00,"Club",98.33
+"30","2020-21","Cavaliers vs. Portland Trail Blazers",2021-05-05 19:30:00,"Club",98.78
+"31","2020-21","Cavaliers vs. Dallas Mavericks",2021-05-09 19:00:00,"Club",109.88
+"32","2020-21","Cavaliers vs. Indiana Pacers",2021-05-10 19:30:00,"Club",103.96
+"33","2020-21","Cavaliers vs. Boston Celtics",2021-05-12 20:00:00,"Club",103.67
+"34","2021-22","Cavaliers vs. Indiana Pacers",2021-10-08 19:00:00,"Club",33.35
+"35","2021-22","Cavaliers vs. Chicago Bulls",2021-10-10 19:00:00,"Club",34.33
+"36","2021-22","Cavaliers vs. Charlotte Hornets",2021-10-22 19:00:00,"Club",117.01
+"37","2021-22","Cavaliers vs. Atlanta Hawks",2021-10-23 18:00:00,"Club",111.22
+"38","2021-22","Cavaliers vs. Portland Trail Blazers",2021-11-03 19:00:00,"Club",77.01
+"39","2021-22","Cavaliers vs. Washington Wizards",2021-11-10 19:00:00,"Club",85.3
+"40","2021-22","Cavaliers vs. Detroit Pistons",2021-11-12 19:30:00,"Club",102.04
+"41","2021-22","Cavaliers vs. Boston Celtics",2021-11-13 20:00:00,"Club",104.59
+"42","2021-22","Cavaliers vs. Boston Celtics",2021-11-15 19:00:00,"Club",96.92
+"43","2021-22","Cavaliers vs. Golden State Warriors",2021-11-18 19:30:00,"Club",136.95
+"44","2021-22","Cavaliers vs. Brooklyn Nets",2021-11-22 19:00:00,"Club",229.85
+"45","2021-22","Cavaliers vs. Phoenix Suns",2021-11-24 19:00:00,"Club",139.57
+"46","2021-22","Cavaliers vs. Orlando Magic",2021-11-27 20:00:00,"Club",104.09
+"47","2021-22","Cavaliers vs. Utah Jazz",2021-12-05 15:30:00,"Club",103.09
+"48","2021-22","Cavaliers vs. Chicago Bulls",2021-12-08 19:00:00,"Club",95.14
+"49","2021-22","Cavaliers vs. Sacramento Kings",2021-12-11 20:00:00,"Club",70.69
+"50","2021-22","Cavaliers vs. Miami Heat",2021-12-13 19:00:00,"Club",108.59
+"51","2021-22","Cavaliers vs. Houston Rockets",2021-12-15 19:00:00,"Club",108.15
+"52","2021-22","Cavaliers vs. Toronto Raptors",2021-12-26 18:00:00,"Club",104.71
+"53","2021-22","Cavaliers vs. Atlanta Hawks",2021-12-31 19:30:00,"Club",147.3
+"54","2021-22","Cavaliers vs. Indiana Pacers",2022-01-02 18:00:00,"Club",96.09
+"55","2021-22","Cavaliers vs. Memphis Grizzlies",2022-01-04 19:00:00,"Club",66.04
+"56","2021-22","Cavaliers vs. Brooklyn Nets",2022-01-17 15:00:00,"Club",244.61
+"57","2021-22","Cavaliers vs. Oklahoma City Thunder",2022-01-22 20:00:00,"Club",76
+"58","2021-22","Cavaliers vs. New York Knicks",2022-01-24 19:00:00,"Club",110.02
+"59","2021-22","Cavaliers vs. Milwaukee Bucks",2022-01-26 19:00:00,"Club",235.09
+"60","2021-22","Cavaliers vs. New Orleans Pelicans",2022-01-31 19:00:00,"Club",95.43
+"61","2021-22","Cavaliers vs. Indiana Pacers",2022-02-06 18:00:00,"Club",100.3
+"62","2021-22","Cavaliers vs. San Antonio Spurs",2022-02-09 19:00:00,"Club",68.23
+"63","2021-22","Cavaliers vs. Washington Wizards",2022-02-26 20:00:00,"Club",113.27
+"64","2021-22","Cavaliers vs. Minnesota Timberwolves",2022-02-28 19:00:00,"Club",73.23
+"65","2021-22","Cavaliers vs. Charlotte Hornets",2022-03-02 19:00:00,"Club",78.53
+"66","2021-22","Cavaliers vs. Toronto Raptors",2022-03-06 19:30:00,"Club",109.71
+"67","2021-22","Cavaliers vs. Los Angeles Clippers",2022-03-14 19:00:00,"Club",115.59
+"68","2021-22","Cavaliers vs. Philadelphia 76ers",2022-03-16 19:00:00,"Club",161.81
+"69","2021-22","Cavaliers vs. Denver Nuggets",2022-03-18 19:30:00,"Club",115.7
+"70","2021-22","Cavaliers vs. Detroit Pistons",2022-03-19 20:00:00,"Club",115.7
+"71","2021-22","Cavaliers vs. Los Angeles Lakers",2022-03-21 19:00:00,"Club",302.26
+"72","2021-22","Cavaliers vs. Chicago Bulls",2022-03-26 20:00:00,"Club",163.3
+"73","2021-22","Cavaliers vs. Orlando Magic",2022-03-28 19:00:00,"Club",76.82
+"74","2021-22","Cavaliers vs. Dallas Mavericks",2022-03-30 19:00:00,"Club",165.98
+"75","2021-22","Cavaliers vs. Philadelphia 76ers",2022-04-03 18:00:00,"Club",173.21
+"76","2021-22","Cavaliers vs. Milwaukee Bucks",2022-04-10 15:30:00,"Club",166.23
+"77","2022-23","Cavaliers vs. Philadelphia 76ers",2022-10-10 19:00:00,"Club",34.25
+"78","2022-23","Cavaliers vs. Atlanta Hawks",2022-10-12 19:00:00,"Club",33.25
+"79","2022-23","Cavaliers vs. Washington Wizards",2022-10-23 19:00:00,"Club",157.13
+"80","2022-23","Cavaliers vs. Orlando Magic",2022-10-26 19:00:00,"Club",117.88
+"81","2022-23","Cavaliers vs. New York Knicks",2022-10-30 18:00:00,"Club",95.88
+"82","2022-23","Cavaliers vs. Boston Celtics",2022-11-02 19:30:00,"Club",154.42
+"83","2022-23","Cavaliers vs. Minnesota Timberwolves",2022-11-13 18:00:00,"Club",133.3
+"84","2022-23","Cavaliers vs. Charlotte Hornets",2022-11-18 19:30:00,"Club",96.23
+"85","2022-23","Cavaliers vs. Miami Heat",2022-11-20 19:00:00,"Club",154.89
+"86","2022-23","Cavaliers vs. Atlanta Hawks",2022-11-21 19:00:00,"Club",92.91
+"87","2022-23","Cavaliers vs. Portland Trail Blazers",2022-11-23 19:00:00,"Club",164.99
+"88","2022-23","Cavaliers vs. Philadelphia 76ers",2022-11-30 19:00:00,"Club",150.87
+"89","2022-23","Cavaliers vs. Orlando Magic",2022-12-02 19:30:00,"Club",137.45
+"90","2022-23","Cavaliers vs. Los Angeles Lakers",2022-12-06 19:30:00,"Club",350.2
+"91","2022-23","Cavaliers vs. Sacramento Kings",2022-12-09 19:30:00,"Club",93.53
+"92","2022-23","Cavaliers vs. Oklahoma City Thunder",2022-12-10 19:30:00,"Club",129.22
+"93","2022-23","Cavaliers vs. Indiana Pacers",2022-12-16 19:30:00,"Club",93.64
+"94","2022-23","Cavaliers vs. Dallas Mavericks",2022-12-17 20:00:00,"Club",162.75
+"95","2022-23","Cavaliers vs. Utah Jazz",2022-12-19 19:00:00,"Club",137.02
+"96","2022-23","Cavaliers vs. Milwaukee Bucks",2022-12-21 19:00:00,"Club",161.88
+"97","2022-23","Cavaliers vs. Toronto Raptors",2022-12-23 19:30:00,"Club",161.8
+"98","2022-23","Cavaliers vs. Brooklyn Nets",2022-12-26 19:00:00,"Club",328.86
+"99","2022-23","Cavaliers vs. Chicago Bulls",2023-01-02 19:00:00,"Club",153.42
+"100","2022-23","Cavaliers vs. Phoenix Suns",2023-01-04 19:00:00,"Club",152.96
+"101","2022-23","Cavaliers vs. New Orleans Pelicans",2023-01-16 15:00:00,"Club",160.97
+"102","2020-21","Cavaliers vs. Charlotte Hornets",2020-12-23 19:00:00,"Floor",509
+"103","2020-21","Cavaliers vs. Philadelphia 76ers",2020-12-27 19:30:00,"Floor",479
+"104","2020-21","Cavaliers vs. New York Knicks",2020-12-29 19:00:00,"Floor",479
+"105","2020-21","Cavaliers vs. Memphis Grizzlies",2021-01-11 19:00:00,"Floor",355
+"106","2020-21","Cavaliers vs. Utah Jazz",2021-01-12 19:30:00,"Floor",355
+"107","2020-21","Cavaliers vs. New York Knicks",2021-01-15 19:30:00,"Floor",435
+"108","2020-21","Cavaliers vs. Brooklyn Nets",2021-01-20 19:00:00,"Floor",479
+"109","2020-21","Cavaliers vs. Brooklyn Nets",2021-01-22 19:30:00,"Floor",479
+"110","2020-21","Cavaliers vs. Los Angeles Lakers",2021-01-25 20:00:00,"Floor",549
+"111","2020-21","Cavaliers vs. Detroit Pistons",2021-01-27 19:00:00,"Floor",355
+"112","2020-21","Cavaliers vs. Minnesota Timberwolves",2021-02-01 20:00:00,"Floor",355.98
+"113","2020-21","Cavaliers vs. Los Angeles Clippers",2021-02-03 20:00:00,"Floor",437.57
+"114","2020-21","Cavaliers vs. Milwaukee Bucks",2021-02-05 19:30:00,"Floor",479
+"115","2020-21","Cavaliers vs. Milwaukee Bucks",2021-02-06 20:00:00,"Floor",479
+"116","2020-21","Cavaliers vs. Denver Nuggets",2021-02-19 19:00:00,"Floor",357.72
+"117","2020-21","Cavaliers vs. Oklahoma City Thunder",2021-02-21 19:00:00,"Floor",356.09
+"118","2020-21","Cavaliers vs. Atlanta Hawks",2021-02-23 19:00:00,"Floor",355.98
+"119","2020-21","Cavaliers vs. Houston Rockets",2021-02-24 19:30:00,"Floor",355
+"120","2020-21","Cavaliers vs. Indiana Pacers",2021-03-03 19:00:00,"Floor",355
+"121","2020-21","Cavaliers vs. Boston Celtics",2021-03-17 20:00:00,"Floor",356.02
+"122","2020-21","Cavaliers vs. San Antonio Spurs",2021-03-19 19:30:00,"Floor",355.83
+"123","2020-21","Cavaliers vs. Toronto Raptors",2021-03-21 19:00:00,"Floor",355
+"124","2020-21","Cavaliers vs. Sacramento Kings",2021-03-22 19:30:00,"Floor",355
+"125","2020-21","Cavaliers vs. Philadelphia 76ers",2021-04-01 19:00:00,"Floor",369.55
+"126","2020-21","Cavaliers vs. Toronto Raptors",2021-04-10 19:30:00,"Floor",493.8
+"127","2020-21","Cavaliers vs. New Orleans Pelicans",2021-04-11 19:00:00,"Floor",774.58
+"128","2020-21","Cavaliers vs. Golden State Warriors",2021-04-15 20:00:00,"Floor",526.11
+"129","2020-21","Cavaliers vs. Chicago Bulls",2021-04-21 19:00:00,"Floor",497.56
+"130","2020-21","Cavaliers vs. Orlando Magic",2021-04-28 19:00:00,"Floor",509.42
+"131","2020-21","Cavaliers vs. Washington Wizards",2021-04-30 19:30:00,"Floor",583.04
+"132","2020-21","Cavaliers vs. Miami Heat",2021-05-01 20:00:00,"Floor",802.59
+"133","2020-21","Cavaliers vs. Phoenix Suns",2021-05-04 19:00:00,"Floor",507.19
+"134","2020-21","Cavaliers vs. Portland Trail Blazers",2021-05-05 19:30:00,"Floor",519.89
+"135","2020-21","Cavaliers vs. Dallas Mavericks",2021-05-09 19:00:00,"Floor",599.88
+"136","2020-21","Cavaliers vs. Indiana Pacers",2021-05-10 19:30:00,"Floor",503.78
+"137","2020-21","Cavaliers vs. Boston Celtics",2021-05-12 20:00:00,"Floor",503.9
+"138","2021-22","Cavaliers vs. Indiana Pacers",2021-10-08 19:00:00,"Floor",148.51
+"139","2021-22","Cavaliers vs. Chicago Bulls",2021-10-10 19:00:00,"Floor",151.74
+"140","2021-22","Cavaliers vs. Charlotte Hornets",2021-10-22 19:00:00,"Floor",508.21
+"141","2021-22","Cavaliers vs. Atlanta Hawks",2021-10-23 18:00:00,"Floor",503.9
+"142","2021-22","Cavaliers vs. Portland Trail Blazers",2021-11-03 19:00:00,"Floor",343.87
+"143","2021-22","Cavaliers vs. Washington Wizards",2021-11-10 19:00:00,"Floor",498.17
+"144","2021-22","Cavaliers vs. Detroit Pistons",2021-11-12 19:30:00,"Floor",498.74
+"145","2021-22","Cavaliers vs. Boston Celtics",2021-11-13 20:00:00,"Floor",511.51
+"146","2021-22","Cavaliers vs. Boston Celtics",2021-11-15 19:00:00,"Floor",503.07
+"147","2021-22","Cavaliers vs. Golden State Warriors",2021-11-18 19:30:00,"Floor",828.89
+"148","2021-22","Cavaliers vs. Brooklyn Nets",2021-11-22 19:00:00,"Floor",1498.97
+"149","2021-22","Cavaliers vs. Phoenix Suns",2021-11-24 19:00:00,"Floor",801.95
+"150","2021-22","Cavaliers vs. Orlando Magic",2021-11-27 20:00:00,"Floor",504.1
+"151","2021-22","Cavaliers vs. Utah Jazz",2021-12-05 15:30:00,"Floor",487.61
+"152","2021-22","Cavaliers vs. Chicago Bulls",2021-12-08 19:00:00,"Floor",506.44
+"153","2021-22","Cavaliers vs. Sacramento Kings",2021-12-11 20:00:00,"Floor",346.39
+"154","2021-22","Cavaliers vs. Miami Heat",2021-12-13 19:00:00,"Floor",501.07
+"155","2021-22","Cavaliers vs. Houston Rockets",2021-12-15 19:00:00,"Floor",497.46
+"156","2021-22","Cavaliers vs. Toronto Raptors",2021-12-26 18:00:00,"Floor",499.76
+"157","2021-22","Cavaliers vs. Atlanta Hawks",2021-12-31 19:30:00,"Floor",820.26
+"158","2021-22","Cavaliers vs. Indiana Pacers",2022-01-02 18:00:00,"Floor",500.19
+"159","2021-22","Cavaliers vs. Memphis Grizzlies",2022-01-04 19:00:00,"Floor",342.12
+"160","2021-22","Cavaliers vs. Brooklyn Nets",2022-01-17 15:00:00,"Floor",1466.31
+"161","2021-22","Cavaliers vs. Oklahoma City Thunder",2022-01-22 20:00:00,"Floor",340.86
+"162","2021-22","Cavaliers vs. New York Knicks",2022-01-24 19:00:00,"Floor",498.61
+"163","2021-22","Cavaliers vs. Milwaukee Bucks",2022-01-26 19:00:00,"Floor",1433.41
+"164","2021-22","Cavaliers vs. New Orleans Pelicans",2022-01-31 19:00:00,"Floor",515.58
+"165","2021-22","Cavaliers vs. Indiana Pacers",2022-02-06 18:00:00,"Floor",513.63
+"166","2021-22","Cavaliers vs. San Antonio Spurs",2022-02-09 19:00:00,"Floor",334.09
+"167","2021-22","Cavaliers vs. Washington Wizards",2022-02-26 20:00:00,"Floor",506.93
+"168","2021-22","Cavaliers vs. Minnesota Timberwolves",2022-02-28 19:00:00,"Floor",344.14
+"169","2021-22","Cavaliers vs. Charlotte Hornets",2022-03-02 19:00:00,"Floor",352.14
+"170","2021-22","Cavaliers vs. Toronto Raptors",2022-03-06 19:30:00,"Floor",511.35
+"171","2021-22","Cavaliers vs. Los Angeles Clippers",2022-03-14 19:00:00,"Floor",501.93
+"172","2021-22","Cavaliers vs. Philadelphia 76ers",2022-03-16 19:00:00,"Floor",813.92
+"173","2021-22","Cavaliers vs. Denver Nuggets",2022-03-18 19:30:00,"Floor",522.23
+"174","2021-22","Cavaliers vs. Detroit Pistons",2022-03-19 20:00:00,"Floor",517.83
+"175","2021-22","Cavaliers vs. Los Angeles Lakers",2022-03-21 19:00:00,"Floor",1479.3
+"176","2021-22","Cavaliers vs. Chicago Bulls",2022-03-26 20:00:00,"Floor",809.52
+"177","2021-22","Cavaliers vs. Orlando Magic",2022-03-28 19:00:00,"Floor",337.46
+"178","2021-22","Cavaliers vs. Dallas Mavericks",2022-03-30 19:00:00,"Floor",806.71
+"179","2021-22","Cavaliers vs. Philadelphia 76ers",2022-04-03 18:00:00,"Floor",826.61
+"180","2021-22","Cavaliers vs. Milwaukee Bucks",2022-04-10 15:30:00,"Floor",807.86
+"181","2022-23","Cavaliers vs. Philadelphia 76ers",2022-10-10 19:00:00,"Floor",173.59
+"182","2022-23","Cavaliers vs. Atlanta Hawks",2022-10-12 19:00:00,"Floor",175.56
+"183","2022-23","Cavaliers vs. Washington Wizards",2022-10-23 19:00:00,"Floor",696.13
+"184","2022-23","Cavaliers vs. Orlando Magic",2022-10-26 19:00:00,"Floor",612.63
+"185","2022-23","Cavaliers vs. New York Knicks",2022-10-30 18:00:00,"Floor",402.86
+"186","2022-23","Cavaliers vs. Boston Celtics",2022-11-02 19:30:00,"Floor",694.34
+"187","2022-23","Cavaliers vs. Minnesota Timberwolves",2022-11-13 18:00:00,"Floor",608.02
+"188","2022-23","Cavaliers vs. Charlotte Hornets",2022-11-18 19:30:00,"Floor",407.76
+"189","2022-23","Cavaliers vs. Miami Heat",2022-11-20 19:00:00,"Floor",710.32
+"190","2022-23","Cavaliers vs. Atlanta Hawks",2022-11-21 19:00:00,"Floor",402.3
+"191","2022-23","Cavaliers vs. Portland Trail Blazers",2022-11-23 19:00:00,"Floor",702.29
+"192","2022-23","Cavaliers vs. Philadelphia 76ers",2022-11-30 19:00:00,"Floor",698.69
+"193","2022-23","Cavaliers vs. Orlando Magic",2022-12-02 19:30:00,"Floor",618.16
+"194","2022-23","Cavaliers vs. Los Angeles Lakers",2022-12-06 19:30:00,"Floor",1590.38
+"195","2022-23","Cavaliers vs. Sacramento Kings",2022-12-09 19:30:00,"Floor",398.99
+"196","2022-23","Cavaliers vs. Oklahoma City Thunder",2022-12-10 19:30:00,"Floor",606.79
+"197","2022-23","Cavaliers vs. Indiana Pacers",2022-12-16 19:30:00,"Floor",401.52
+"198","2022-23","Cavaliers vs. Dallas Mavericks",2022-12-17 20:00:00,"Floor",694.09
+"199","2022-23","Cavaliers vs. Utah Jazz",2022-12-19 19:00:00,"Floor",614.47
+"200","2022-23","Cavaliers vs. Milwaukee Bucks",2022-12-21 19:00:00,"Floor",705.37
+"201","2022-23","Cavaliers vs. Toronto Raptors",2022-12-23 19:30:00,"Floor",701.42
+"202","2022-23","Cavaliers vs. Brooklyn Nets",2022-12-26 19:00:00,"Floor",1576.13
+"203","2022-23","Cavaliers vs. Chicago Bulls",2023-01-02 19:00:00,"Floor",703.42
+"204","2022-23","Cavaliers vs. Phoenix Suns",2023-01-04 19:00:00,"Floor",697.64
+"205","2022-23","Cavaliers vs. New Orleans Pelicans",2023-01-16 15:00:00,"Floor",696.45
+"206","2020-21","Cavaliers vs. Charlotte Hornets",2020-12-23 19:00:00,"Lower Bowl",219.83
+"207","2020-21","Cavaliers vs. Philadelphia 76ers",2020-12-27 19:30:00,"Lower Bowl",208.42
+"208","2020-21","Cavaliers vs. New York Knicks",2020-12-29 19:00:00,"Lower Bowl",173.94
+"209","2020-21","Cavaliers vs. Memphis Grizzlies",2021-01-11 19:00:00,"Lower Bowl",143.08
+"210","2020-21","Cavaliers vs. Utah Jazz",2021-01-12 19:30:00,"Lower Bowl",113.63
+"211","2020-21","Cavaliers vs. New York Knicks",2021-01-15 19:30:00,"Lower Bowl",153.63
+"212","2020-21","Cavaliers vs. Brooklyn Nets",2021-01-20 19:00:00,"Lower Bowl",177.56
+"213","2020-21","Cavaliers vs. Brooklyn Nets",2021-01-22 19:30:00,"Lower Bowl",164.52
+"214","2020-21","Cavaliers vs. Los Angeles Lakers",2021-01-25 20:00:00,"Lower Bowl",173.11
+"215","2020-21","Cavaliers vs. Detroit Pistons",2021-01-27 19:00:00,"Lower Bowl",117.39
+"216","2020-21","Cavaliers vs. Minnesota Timberwolves",2021-02-01 20:00:00,"Lower Bowl",119.64
+"217","2020-21","Cavaliers vs. Los Angeles Clippers",2021-02-03 20:00:00,"Lower Bowl",157.18
+"218","2020-21","Cavaliers vs. Milwaukee Bucks",2021-02-05 19:30:00,"Lower Bowl",169.7
+"219","2020-21","Cavaliers vs. Milwaukee Bucks",2021-02-06 20:00:00,"Lower Bowl",168.65
+"220","2020-21","Cavaliers vs. Denver Nuggets",2021-02-19 19:00:00,"Lower Bowl",75.17
+"221","2020-21","Cavaliers vs. Oklahoma City Thunder",2021-02-21 19:00:00,"Lower Bowl",115.57
+"222","2020-21","Cavaliers vs. Atlanta Hawks",2021-02-23 19:00:00,"Lower Bowl",115.81
+"223","2020-21","Cavaliers vs. Houston Rockets",2021-02-24 19:30:00,"Lower Bowl",114.22
+"224","2020-21","Cavaliers vs. Indiana Pacers",2021-03-03 19:00:00,"Lower Bowl",94.99
+"225","2020-21","Cavaliers vs. Boston Celtics",2021-03-17 20:00:00,"Lower Bowl",78.63
+"226","2020-21","Cavaliers vs. San Antonio Spurs",2021-03-19 19:30:00,"Lower Bowl",99.92
+"227","2020-21","Cavaliers vs. Toronto Raptors",2021-03-21 19:00:00,"Lower Bowl",97.48
+"228","2020-21","Cavaliers vs. Sacramento Kings",2021-03-22 19:30:00,"Lower Bowl",86.38
+"229","2020-21","Cavaliers vs. Philadelphia 76ers",2021-04-01 19:00:00,"Lower Bowl",106.05
+"230","2020-21","Cavaliers vs. Toronto Raptors",2021-04-10 19:30:00,"Lower Bowl",104.21
+"231","2020-21","Cavaliers vs. New Orleans Pelicans",2021-04-11 19:00:00,"Lower Bowl",123.89
+"232","2020-21","Cavaliers vs. Golden State Warriors",2021-04-15 20:00:00,"Lower Bowl",108.45
+"233","2020-21","Cavaliers vs. Chicago Bulls",2021-04-21 19:00:00,"Lower Bowl",99.57
+"234","2020-21","Cavaliers vs. Orlando Magic",2021-04-28 19:00:00,"Lower Bowl",93.37
+"235","2020-21","Cavaliers vs. Washington Wizards",2021-04-30 19:30:00,"Lower Bowl",120.18
+"236","2020-21","Cavaliers vs. Miami Heat",2021-05-01 20:00:00,"Lower Bowl",134.98
+"237","2020-21","Cavaliers vs. Phoenix Suns",2021-05-04 19:00:00,"Lower Bowl",111.72
+"238","2020-21","Cavaliers vs. Portland Trail Blazers",2021-05-05 19:30:00,"Lower Bowl",107.48
+"239","2020-21","Cavaliers vs. Dallas Mavericks",2021-05-09 19:00:00,"Lower Bowl",123.18
+"240","2020-21","Cavaliers vs. Indiana Pacers",2021-05-10 19:30:00,"Lower Bowl",109.2
+"241","2020-21","Cavaliers vs. Boston Celtics",2021-05-12 20:00:00,"Lower Bowl",99.98
+"242","2021-22","Cavaliers vs. Indiana Pacers",2021-10-08 19:00:00,"Lower Bowl",29.2
+"243","2021-22","Cavaliers vs. Chicago Bulls",2021-10-10 19:00:00,"Lower Bowl",29.69
+"244","2021-22","Cavaliers vs. Charlotte Hornets",2021-10-22 19:00:00,"Lower Bowl",96.69
+"245","2021-22","Cavaliers vs. Atlanta Hawks",2021-10-23 18:00:00,"Lower Bowl",96.71
+"246","2021-22","Cavaliers vs. Portland Trail Blazers",2021-11-03 19:00:00,"Lower Bowl",66.45
+"247","2021-22","Cavaliers vs. Washington Wizards",2021-11-10 19:00:00,"Lower Bowl",97.72
+"248","2021-22","Cavaliers vs. Detroit Pistons",2021-11-12 19:30:00,"Lower Bowl",92.31
+"249","2021-22","Cavaliers vs. Boston Celtics",2021-11-13 20:00:00,"Lower Bowl",100.49
+"250","2021-22","Cavaliers vs. Boston Celtics",2021-11-15 19:00:00,"Lower Bowl",88.35
+"251","2021-22","Cavaliers vs. Golden State Warriors",2021-11-18 19:30:00,"Lower Bowl",153.07
+"252","2021-22","Cavaliers vs. Brooklyn Nets",2021-11-22 19:00:00,"Lower Bowl",252.89
+"253","2021-22","Cavaliers vs. Phoenix Suns",2021-11-24 19:00:00,"Lower Bowl",141.73
+"254","2021-22","Cavaliers vs. Orlando Magic",2021-11-27 20:00:00,"Lower Bowl",92.42
+"255","2021-22","Cavaliers vs. Utah Jazz",2021-12-05 15:30:00,"Lower Bowl",90.89
+"256","2021-22","Cavaliers vs. Chicago Bulls",2021-12-08 19:00:00,"Lower Bowl",91.32
+"257","2021-22","Cavaliers vs. Sacramento Kings",2021-12-11 20:00:00,"Lower Bowl",72.6
+"258","2021-22","Cavaliers vs. Miami Heat",2021-12-13 19:00:00,"Lower Bowl",94.7
+"259","2021-22","Cavaliers vs. Houston Rockets",2021-12-15 19:00:00,"Lower Bowl",85.85
+"260","2021-22","Cavaliers vs. Toronto Raptors",2021-12-26 18:00:00,"Lower Bowl",117.02
+"261","2021-22","Cavaliers vs. Atlanta Hawks",2021-12-31 19:30:00,"Lower Bowl",147.56
+"262","2021-22","Cavaliers vs. Indiana Pacers",2022-01-02 18:00:00,"Lower Bowl",95.59
+"263","2021-22","Cavaliers vs. Memphis Grizzlies",2022-01-04 19:00:00,"Lower Bowl",63.87
+"264","2021-22","Cavaliers vs. Brooklyn Nets",2022-01-17 15:00:00,"Lower Bowl",227.35
+"265","2021-22","Cavaliers vs. Oklahoma City Thunder",2022-01-22 20:00:00,"Lower Bowl",79.08
+"266","2021-22","Cavaliers vs. New York Knicks",2022-01-24 19:00:00,"Lower Bowl",100.77
+"267","2021-22","Cavaliers vs. Milwaukee Bucks",2022-01-26 19:00:00,"Lower Bowl",236.93
+"268","2021-22","Cavaliers vs. New Orleans Pelicans",2022-01-31 19:00:00,"Lower Bowl",85.83
+"269","2021-22","Cavaliers vs. Indiana Pacers",2022-02-06 18:00:00,"Lower Bowl",101.59
+"270","2021-22","Cavaliers vs. San Antonio Spurs",2022-02-09 19:00:00,"Lower Bowl",71.58
+"271","2021-22","Cavaliers vs. Washington Wizards",2022-02-26 20:00:00,"Lower Bowl",112.39
+"272","2021-22","Cavaliers vs. Minnesota Timberwolves",2022-02-28 19:00:00,"Lower Bowl",73.64
+"273","2021-22","Cavaliers vs. Charlotte Hornets",2022-03-02 19:00:00,"Lower Bowl",79.22
+"274","2021-22","Cavaliers vs. Toronto Raptors",2022-03-06 19:30:00,"Lower Bowl",98.94
+"275","2021-22","Cavaliers vs. Los Angeles Clippers",2022-03-14 19:00:00,"Lower Bowl",110.79
+"276","2021-22","Cavaliers vs. Philadelphia 76ers",2022-03-16 19:00:00,"Lower Bowl",156.19
+"277","2021-22","Cavaliers vs. Denver Nuggets",2022-03-18 19:30:00,"Lower Bowl",117.57
+"278","2021-22","Cavaliers vs. Detroit Pistons",2022-03-19 20:00:00,"Lower Bowl",112.05
+"279","2021-22","Cavaliers vs. Los Angeles Lakers",2022-03-21 19:00:00,"Lower Bowl",296.72
+"280","2021-22","Cavaliers vs. Chicago Bulls",2022-03-26 20:00:00,"Lower Bowl",169.74
+"281","2021-22","Cavaliers vs. Orlando Magic",2022-03-28 19:00:00,"Lower Bowl",74.09
+"282","2021-22","Cavaliers vs. Dallas Mavericks",2022-03-30 19:00:00,"Lower Bowl",150.24
+"283","2021-22","Cavaliers vs. Philadelphia 76ers",2022-04-03 18:00:00,"Lower Bowl",174.75
+"284","2021-22","Cavaliers vs. Milwaukee Bucks",2022-04-10 15:30:00,"Lower Bowl",166
+"285","2022-23","Cavaliers vs. Philadelphia 76ers",2022-10-10 19:00:00,"Lower Bowl",32.48
+"286","2022-23","Cavaliers vs. Atlanta Hawks",2022-10-12 19:00:00,"Lower Bowl",31.96
+"287","2022-23","Cavaliers vs. Washington Wizards",2022-10-23 19:00:00,"Lower Bowl",146.98
+"288","2022-23","Cavaliers vs. Orlando Magic",2022-10-26 19:00:00,"Lower Bowl",122.39
+"289","2022-23","Cavaliers vs. New York Knicks",2022-10-30 18:00:00,"Lower Bowl",93.84
+"290","2022-23","Cavaliers vs. Boston Celtics",2022-11-02 19:30:00,"Lower Bowl",154.67
+"291","2022-23","Cavaliers vs. Minnesota Timberwolves",2022-11-13 18:00:00,"Lower Bowl",135.31
+"292","2022-23","Cavaliers vs. Charlotte Hornets",2022-11-18 19:30:00,"Lower Bowl",100.64
+"293","2022-23","Cavaliers vs. Miami Heat",2022-11-20 19:00:00,"Lower Bowl",153.65
+"294","2022-23","Cavaliers vs. Atlanta Hawks",2022-11-21 19:00:00,"Lower Bowl",96.93
+"295","2022-23","Cavaliers vs. Portland Trail Blazers",2022-11-23 19:00:00,"Lower Bowl",162.7
+"296","2022-23","Cavaliers vs. Philadelphia 76ers",2022-11-30 19:00:00,"Lower Bowl",150.11
+"297","2022-23","Cavaliers vs. Orlando Magic",2022-12-02 19:30:00,"Lower Bowl",130.11
+"298","2022-23","Cavaliers vs. Los Angeles Lakers",2022-12-06 19:30:00,"Lower Bowl",360.44
+"299","2022-23","Cavaliers vs. Sacramento Kings",2022-12-09 19:30:00,"Lower Bowl",95.01
+"300","2022-23","Cavaliers vs. Oklahoma City Thunder",2022-12-10 19:30:00,"Lower Bowl",131.36
+"301","2022-23","Cavaliers vs. Indiana Pacers",2022-12-16 19:30:00,"Lower Bowl",96.79
+"302","2022-23","Cavaliers vs. Dallas Mavericks",2022-12-17 20:00:00,"Lower Bowl",160.1
+"303","2022-23","Cavaliers vs. Utah Jazz",2022-12-19 19:00:00,"Lower Bowl",136.04
+"304","2022-23","Cavaliers vs. Milwaukee Bucks",2022-12-21 19:00:00,"Lower Bowl",173.09
+"305","2022-23","Cavaliers vs. Toronto Raptors",2022-12-23 19:30:00,"Lower Bowl",157.89
+"306","2022-23","Cavaliers vs. Brooklyn Nets",2022-12-26 19:00:00,"Lower Bowl",345.65
+"307","2022-23","Cavaliers vs. Chicago Bulls",2023-01-02 19:00:00,"Lower Bowl",152.05
+"308","2022-23","Cavaliers vs. Phoenix Suns",2023-01-04 19:00:00,"Lower Bowl",151.59
+"309","2022-23","Cavaliers vs. New Orleans Pelicans",2023-01-16 15:00:00,"Lower Bowl",159.72
+"310","2020-21","Cavaliers vs. Charlotte Hornets",2020-12-23 19:00:00,"Mezzanine",128
+"311","2020-21","Cavaliers vs. Philadelphia 76ers",2020-12-27 19:30:00,"Mezzanine",127.5
+"312","2020-21","Cavaliers vs. New York Knicks",2020-12-29 19:00:00,"Mezzanine",128
+"313","2020-21","Cavaliers vs. Memphis Grizzlies",2021-01-11 19:00:00,"Mezzanine",41.87
+"314","2020-21","Cavaliers vs. Utah Jazz",2021-01-12 19:30:00,"Mezzanine",42.7
+"315","2020-21","Cavaliers vs. New York Knicks",2021-01-15 19:30:00,"Mezzanine",62.94
+"316","2020-21","Cavaliers vs. Brooklyn Nets",2021-01-20 19:00:00,"Mezzanine",53.56
+"317","2020-21","Cavaliers vs. Brooklyn Nets",2021-01-22 19:30:00,"Mezzanine",73.33
+"318","2020-21","Cavaliers vs. Los Angeles Lakers",2021-01-25 20:00:00,"Mezzanine",76.97
+"319","2020-21","Cavaliers vs. Detroit Pistons",2021-01-27 19:00:00,"Mezzanine",36.89
+"320","2020-21","Cavaliers vs. Minnesota Timberwolves",2021-02-01 20:00:00,"Mezzanine",47.01
+"321","2020-21","Cavaliers vs. Los Angeles Clippers",2021-02-03 20:00:00,"Mezzanine",55.78
+"322","2020-21","Cavaliers vs. Milwaukee Bucks",2021-02-05 19:30:00,"Mezzanine",67.82
+"323","2020-21","Cavaliers vs. Milwaukee Bucks",2021-02-06 20:00:00,"Mezzanine",67.82
+"324","2020-21","Cavaliers vs. Denver Nuggets",2021-02-19 19:00:00,"Mezzanine",36.3
+"325","2020-21","Cavaliers vs. Oklahoma City Thunder",2021-02-21 19:00:00,"Mezzanine",49.88
+"326","2020-21","Cavaliers vs. Atlanta Hawks",2021-02-23 19:00:00,"Mezzanine",48.66
+"327","2020-21","Cavaliers vs. Houston Rockets",2021-02-24 19:30:00,"Mezzanine",43.04
+"328","2020-21","Cavaliers vs. Indiana Pacers",2021-03-03 19:00:00,"Mezzanine",44.59
+"329","2020-21","Cavaliers vs. Boston Celtics",2021-03-17 20:00:00,"Mezzanine",45.87
+"330","2020-21","Cavaliers vs. San Antonio Spurs",2021-03-19 19:30:00,"Mezzanine",38.01
+"331","2020-21","Cavaliers vs. Toronto Raptors",2021-03-21 19:00:00,"Mezzanine",38.17
+"332","2020-21","Cavaliers vs. Sacramento Kings",2021-03-22 19:30:00,"Mezzanine",31.47
+"333","2020-21","Cavaliers vs. Philadelphia 76ers",2021-04-01 19:00:00,"Mezzanine",43.93
+"334","2020-21","Cavaliers vs. Toronto Raptors",2021-04-10 19:30:00,"Mezzanine",41.87
+"335","2020-21","Cavaliers vs. New Orleans Pelicans",2021-04-11 19:00:00,"Mezzanine",46.02
+"336","2020-21","Cavaliers vs. Golden State Warriors",2021-04-15 20:00:00,"Mezzanine",47.51
+"337","2020-21","Cavaliers vs. Chicago Bulls",2021-04-21 19:00:00,"Mezzanine",39.19
+"338","2020-21","Cavaliers vs. Orlando Magic",2021-04-28 19:00:00,"Mezzanine",32.81
+"339","2020-21","Cavaliers vs. Washington Wizards",2021-04-30 19:30:00,"Mezzanine",46.85
+"340","2020-21","Cavaliers vs. Miami Heat",2021-05-01 20:00:00,"Mezzanine",55.06
+"341","2020-21","Cavaliers vs. Phoenix Suns",2021-05-04 19:00:00,"Mezzanine",42.22
+"342","2020-21","Cavaliers vs. Portland Trail Blazers",2021-05-05 19:30:00,"Mezzanine",41.92
+"343","2020-21","Cavaliers vs. Dallas Mavericks",2021-05-09 19:00:00,"Mezzanine",49.46
+"344","2020-21","Cavaliers vs. Indiana Pacers",2021-05-10 19:30:00,"Mezzanine",41.64
+"345","2020-21","Cavaliers vs. Boston Celtics",2021-05-12 20:00:00,"Mezzanine",42.63
+"346","2021-22","Cavaliers vs. Indiana Pacers",2021-10-08 19:00:00,"Mezzanine",10.29
+"347","2021-22","Cavaliers vs. Chicago Bulls",2021-10-10 19:00:00,"Mezzanine",10.26
+"348","2021-22","Cavaliers vs. Charlotte Hornets",2021-10-22 19:00:00,"Mezzanine",30.17
+"349","2021-22","Cavaliers vs. Atlanta Hawks",2021-10-23 18:00:00,"Mezzanine",29.1
+"350","2021-22","Cavaliers vs. Portland Trail Blazers",2021-11-03 19:00:00,"Mezzanine",21.68
+"351","2021-22","Cavaliers vs. Washington Wizards",2021-11-10 19:00:00,"Mezzanine",23.55
+"352","2021-22","Cavaliers vs. Detroit Pistons",2021-11-12 19:30:00,"Mezzanine",32.79
+"353","2021-22","Cavaliers vs. Boston Celtics",2021-11-13 20:00:00,"Mezzanine",38.71
+"354","2021-22","Cavaliers vs. Boston Celtics",2021-11-15 19:00:00,"Mezzanine",32.42
+"355","2021-22","Cavaliers vs. Golden State Warriors",2021-11-18 19:30:00,"Mezzanine",73.9
+"356","2021-22","Cavaliers vs. Brooklyn Nets",2021-11-22 19:00:00,"Mezzanine",82.3
+"357","2021-22","Cavaliers vs. Phoenix Suns",2021-11-24 19:00:00,"Mezzanine",71.35
+"358","2021-22","Cavaliers vs. Orlando Magic",2021-11-27 20:00:00,"Mezzanine",32.59
+"359","2021-22","Cavaliers vs. Utah Jazz",2021-12-05 15:30:00,"Mezzanine",37.95
+"360","2021-22","Cavaliers vs. Chicago Bulls",2021-12-08 19:00:00,"Mezzanine",37.4
+"361","2021-22","Cavaliers vs. Sacramento Kings",2021-12-11 20:00:00,"Mezzanine",31.99
+"362","2021-22","Cavaliers vs. Miami Heat",2021-12-13 19:00:00,"Mezzanine",36.45
+"363","2021-22","Cavaliers vs. Houston Rockets",2021-12-15 19:00:00,"Mezzanine",37.66
+"364","2021-22","Cavaliers vs. Toronto Raptors",2021-12-26 18:00:00,"Mezzanine",48.41
+"365","2021-22","Cavaliers vs. Atlanta Hawks",2021-12-31 19:30:00,"Mezzanine",58.21
+"366","2021-22","Cavaliers vs. Indiana Pacers",2022-01-02 18:00:00,"Mezzanine",39.14
+"367","2021-22","Cavaliers vs. Memphis Grizzlies",2022-01-04 19:00:00,"Mezzanine",25.45
+"368","2021-22","Cavaliers vs. Brooklyn Nets",2022-01-17 15:00:00,"Mezzanine",75.78
+"369","2021-22","Cavaliers vs. Oklahoma City Thunder",2022-01-22 20:00:00,"Mezzanine",29.37
+"370","2021-22","Cavaliers vs. New York Knicks",2022-01-24 19:00:00,"Mezzanine",32.06
+"371","2021-22","Cavaliers vs. Milwaukee Bucks",2022-01-26 19:00:00,"Mezzanine",83.11
+"372","2021-22","Cavaliers vs. New Orleans Pelicans",2022-01-31 19:00:00,"Mezzanine",31.73
+"373","2021-22","Cavaliers vs. Indiana Pacers",2022-02-06 18:00:00,"Mezzanine",44.99
+"374","2021-22","Cavaliers vs. San Antonio Spurs",2022-02-09 19:00:00,"Mezzanine",28.46
+"375","2021-22","Cavaliers vs. Washington Wizards",2022-02-26 20:00:00,"Mezzanine",39.5
+"376","2021-22","Cavaliers vs. Minnesota Timberwolves",2022-02-28 19:00:00,"Mezzanine",27.39
+"377","2021-22","Cavaliers vs. Charlotte Hornets",2022-03-02 19:00:00,"Mezzanine",39.62
+"378","2021-22","Cavaliers vs. Toronto Raptors",2022-03-06 19:30:00,"Mezzanine",50.86
+"379","2021-22","Cavaliers vs. Los Angeles Clippers",2022-03-14 19:00:00,"Mezzanine",49.77
+"380","2021-22","Cavaliers vs. Philadelphia 76ers",2022-03-16 19:00:00,"Mezzanine",77.39
+"381","2021-22","Cavaliers vs. Denver Nuggets",2022-03-18 19:30:00,"Mezzanine",53.81
+"382","2021-22","Cavaliers vs. Detroit Pistons",2022-03-19 20:00:00,"Mezzanine",55.93
+"383","2021-22","Cavaliers vs. Los Angeles Lakers",2022-03-21 19:00:00,"Mezzanine",113.47
+"384","2021-22","Cavaliers vs. Chicago Bulls",2022-03-26 20:00:00,"Mezzanine",84.28
+"385","2021-22","Cavaliers vs. Orlando Magic",2022-03-28 19:00:00,"Mezzanine",40.54
+"386","2021-22","Cavaliers vs. Dallas Mavericks",2022-03-30 19:00:00,"Mezzanine",79.75
+"387","2021-22","Cavaliers vs. Philadelphia 76ers",2022-04-03 18:00:00,"Mezzanine",77.79
+"388","2021-22","Cavaliers vs. Milwaukee Bucks",2022-04-10 15:30:00,"Mezzanine",86.78
+"389","2022-23","Cavaliers vs. Philadelphia 76ers",2022-10-10 19:00:00,"Mezzanine",14.22
+"390","2022-23","Cavaliers vs. Atlanta Hawks",2022-10-12 19:00:00,"Mezzanine",11.38
+"391","2022-23","Cavaliers vs. Washington Wizards",2022-10-23 19:00:00,"Mezzanine",83.65
+"392","2022-23","Cavaliers vs. Orlando Magic",2022-10-26 19:00:00,"Mezzanine",49.6
+"393","2022-23","Cavaliers vs. New York Knicks",2022-10-30 18:00:00,"Mezzanine",46.63
+"394","2022-23","Cavaliers vs. Boston Celtics",2022-11-02 19:30:00,"Mezzanine",63.56
+"395","2022-23","Cavaliers vs. Minnesota Timberwolves",2022-11-13 18:00:00,"Mezzanine",56.21
+"396","2022-23","Cavaliers vs. Charlotte Hornets",2022-11-18 19:30:00,"Mezzanine",55.95
+"397","2022-23","Cavaliers vs. Miami Heat",2022-11-20 19:00:00,"Mezzanine",76.15
+"398","2022-23","Cavaliers vs. Atlanta Hawks",2022-11-21 19:00:00,"Mezzanine",49.23
+"399","2022-23","Cavaliers vs. Portland Trail Blazers",2022-11-23 19:00:00,"Mezzanine",84.09
+"400","2022-23","Cavaliers vs. Philadelphia 76ers",2022-11-30 19:00:00,"Mezzanine",64.8
+"401","2022-23","Cavaliers vs. Orlando Magic",2022-12-02 19:30:00,"Mezzanine",53.44
+"402","2022-23","Cavaliers vs. Los Angeles Lakers",2022-12-06 19:30:00,"Mezzanine",118.36
+"403","2022-23","Cavaliers vs. Sacramento Kings",2022-12-09 19:30:00,"Mezzanine",47.89
+"404","2022-23","Cavaliers vs. Oklahoma City Thunder",2022-12-10 19:30:00,"Mezzanine",63.61
+"405","2022-23","Cavaliers vs. Indiana Pacers",2022-12-16 19:30:00,"Mezzanine",48.66
+"406","2022-23","Cavaliers vs. Dallas Mavericks",2022-12-17 20:00:00,"Mezzanine",84.77
+"407","2022-23","Cavaliers vs. Utah Jazz",2022-12-19 19:00:00,"Mezzanine",63.93
+"408","2022-23","Cavaliers vs. Milwaukee Bucks",2022-12-21 19:00:00,"Mezzanine",90.6
+"409","2022-23","Cavaliers vs. Toronto Raptors",2022-12-23 19:30:00,"Mezzanine",83.42
+"410","2022-23","Cavaliers vs. Brooklyn Nets",2022-12-26 19:00:00,"Mezzanine",142.99
+"411","2022-23","Cavaliers vs. Chicago Bulls",2023-01-02 19:00:00,"Mezzanine",84.25
+"412","2022-23","Cavaliers vs. Phoenix Suns",2023-01-04 19:00:00,"Mezzanine",75.68
+"413","2022-23","Cavaliers vs. New Orleans Pelicans",2023-01-16 15:00:00,"Mezzanine",91.45
+"414","2020-21","Cavaliers vs. Memphis Grizzlies",2021-01-11 19:00:00,"Upper Bowl",14.1
+"415","2020-21","Cavaliers vs. Utah Jazz",2021-01-12 19:30:00,"Upper Bowl",13.52
+"416","2020-21","Cavaliers vs. New York Knicks",2021-01-15 19:30:00,"Upper Bowl",24.39
+"417","2020-21","Cavaliers vs. Brooklyn Nets",2021-01-20 19:00:00,"Upper Bowl",31.41
+"418","2020-21","Cavaliers vs. Brooklyn Nets",2021-01-22 19:30:00,"Upper Bowl",38.76
+"419","2020-21","Cavaliers vs. Los Angeles Lakers",2021-01-25 20:00:00,"Upper Bowl",52.67
+"420","2020-21","Cavaliers vs. Detroit Pistons",2021-01-27 19:00:00,"Upper Bowl",12.14
+"421","2020-21","Cavaliers vs. Minnesota Timberwolves",2021-02-01 20:00:00,"Upper Bowl",12.63
+"422","2020-21","Cavaliers vs. Los Angeles Clippers",2021-02-03 20:00:00,"Upper Bowl",22.13
+"423","2020-21","Cavaliers vs. Milwaukee Bucks",2021-02-05 19:30:00,"Upper Bowl",34.58
+"424","2020-21","Cavaliers vs. Milwaukee Bucks",2021-02-06 20:00:00,"Upper Bowl",32.49
+"425","2020-21","Cavaliers vs. Denver Nuggets",2021-02-19 19:00:00,"Upper Bowl",12.12
+"426","2020-21","Cavaliers vs. Oklahoma City Thunder",2021-02-21 19:00:00,"Upper Bowl",12.66
+"427","2020-21","Cavaliers vs. Atlanta Hawks",2021-02-23 19:00:00,"Upper Bowl",12.8
+"428","2020-21","Cavaliers vs. Houston Rockets",2021-02-24 19:30:00,"Upper Bowl",13.02
+"429","2020-21","Cavaliers vs. Indiana Pacers",2021-03-03 19:00:00,"Upper Bowl",12.25
+"430","2020-21","Cavaliers vs. Boston Celtics",2021-03-17 20:00:00,"Upper Bowl",12.39
+"431","2020-21","Cavaliers vs. San Antonio Spurs",2021-03-19 19:30:00,"Upper Bowl",12.88
+"432","2020-21","Cavaliers vs. Toronto Raptors",2021-03-21 19:00:00,"Upper Bowl",11.83
+"433","2020-21","Cavaliers vs. Sacramento Kings",2021-03-22 19:30:00,"Upper Bowl",11.21
+"434","2020-21","Cavaliers vs. Philadelphia 76ers",2021-04-01 19:00:00,"Upper Bowl",17.14
+"435","2020-21","Cavaliers vs. Toronto Raptors",2021-04-10 19:30:00,"Upper Bowl",12.43
+"436","2020-21","Cavaliers vs. New Orleans Pelicans",2021-04-11 19:00:00,"Upper Bowl",24.93
+"437","2020-21","Cavaliers vs. Golden State Warriors",2021-04-15 20:00:00,"Upper Bowl",20.92
+"438","2020-21","Cavaliers vs. Chicago Bulls",2021-04-21 19:00:00,"Upper Bowl",12.24
+"439","2020-21","Cavaliers vs. Orlando Magic",2021-04-28 19:00:00,"Upper Bowl",12.48
+"440","2020-21","Cavaliers vs. Washington Wizards",2021-04-30 19:30:00,"Upper Bowl",21
+"441","2020-21","Cavaliers vs. Miami Heat",2021-05-01 20:00:00,"Upper Bowl",26.92
+"442","2020-21","Cavaliers vs. Phoenix Suns",2021-05-04 19:00:00,"Upper Bowl",11.86
+"443","2020-21","Cavaliers vs. Portland Trail Blazers",2021-05-05 19:30:00,"Upper Bowl",12.27
+"444","2020-21","Cavaliers vs. Dallas Mavericks",2021-05-09 19:00:00,"Upper Bowl",21.12
+"445","2020-21","Cavaliers vs. Indiana Pacers",2021-05-10 19:30:00,"Upper Bowl",11.28
+"446","2020-21","Cavaliers vs. Boston Celtics",2021-05-12 20:00:00,"Upper Bowl",12.14
+"447","2021-22","Cavaliers vs. Indiana Pacers",2021-10-08 19:00:00,"Upper Bowl",5.4
+"448","2021-22","Cavaliers vs. Chicago Bulls",2021-10-10 19:00:00,"Upper Bowl",5.36
+"449","2021-22","Cavaliers vs. Charlotte Hornets",2021-10-22 19:00:00,"Upper Bowl",17.92
+"450","2021-22","Cavaliers vs. Atlanta Hawks",2021-10-23 18:00:00,"Upper Bowl",16.63
+"451","2021-22","Cavaliers vs. Portland Trail Blazers",2021-11-03 19:00:00,"Upper Bowl",12.38
+"452","2021-22","Cavaliers vs. Washington Wizards",2021-11-10 19:00:00,"Upper Bowl",15.19
+"453","2021-22","Cavaliers vs. Detroit Pistons",2021-11-12 19:30:00,"Upper Bowl",17.28
+"454","2021-22","Cavaliers vs. Boston Celtics",2021-11-13 20:00:00,"Upper Bowl",23.58
+"455","2021-22","Cavaliers vs. Boston Celtics",2021-11-15 19:00:00,"Upper Bowl",16.32
+"456","2021-22","Cavaliers vs. Golden State Warriors",2021-11-18 19:30:00,"Upper Bowl",27.8
+"457","2021-22","Cavaliers vs. Brooklyn Nets",2021-11-22 19:00:00,"Upper Bowl",40.78
+"458","2021-22","Cavaliers vs. Phoenix Suns",2021-11-24 19:00:00,"Upper Bowl",25.71
+"459","2021-22","Cavaliers vs. Orlando Magic",2021-11-27 20:00:00,"Upper Bowl",19.7
+"460","2021-22","Cavaliers vs. Utah Jazz",2021-12-05 15:30:00,"Upper Bowl",21.8
+"461","2021-22","Cavaliers vs. Chicago Bulls",2021-12-08 19:00:00,"Upper Bowl",18.78
+"462","2021-22","Cavaliers vs. Sacramento Kings",2021-12-11 20:00:00,"Upper Bowl",16.43
+"463","2021-22","Cavaliers vs. Miami Heat",2021-12-13 19:00:00,"Upper Bowl",20.37
+"464","2021-22","Cavaliers vs. Houston Rockets",2021-12-15 19:00:00,"Upper Bowl",20.1
+"465","2021-22","Cavaliers vs. Toronto Raptors",2021-12-26 18:00:00,"Upper Bowl",25.13
+"466","2021-22","Cavaliers vs. Atlanta Hawks",2021-12-31 19:30:00,"Upper Bowl",31.3
+"467","2021-22","Cavaliers vs. Indiana Pacers",2022-01-02 18:00:00,"Upper Bowl",22.98
+"468","2021-22","Cavaliers vs. Memphis Grizzlies",2022-01-04 19:00:00,"Upper Bowl",15.42
+"469","2021-22","Cavaliers vs. Brooklyn Nets",2022-01-17 15:00:00,"Upper Bowl",48.15
+"470","2021-22","Cavaliers vs. Oklahoma City Thunder",2022-01-22 20:00:00,"Upper Bowl",17.06
+"471","2021-22","Cavaliers vs. New York Knicks",2022-01-24 19:00:00,"Upper Bowl",20.07
+"472","2021-22","Cavaliers vs. Milwaukee Bucks",2022-01-26 19:00:00,"Upper Bowl",46.19
+"473","2021-22","Cavaliers vs. New Orleans Pelicans",2022-01-31 19:00:00,"Upper Bowl",19.35
+"474","2021-22","Cavaliers vs. Indiana Pacers",2022-02-06 18:00:00,"Upper Bowl",22.83
+"475","2021-22","Cavaliers vs. San Antonio Spurs",2022-02-09 19:00:00,"Upper Bowl",16.22
+"476","2021-22","Cavaliers vs. Washington Wizards",2022-02-26 20:00:00,"Upper Bowl",24.47
+"477","2021-22","Cavaliers vs. Minnesota Timberwolves",2022-02-28 19:00:00,"Upper Bowl",15.14
+"478","2021-22","Cavaliers vs. Charlotte Hornets",2022-03-02 19:00:00,"Upper Bowl",16.01
+"479","2021-22","Cavaliers vs. Toronto Raptors",2022-03-06 19:30:00,"Upper Bowl",22.1
+"480","2021-22","Cavaliers vs. Los Angeles Clippers",2022-03-14 19:00:00,"Upper Bowl",24.46
+"481","2021-22","Cavaliers vs. Philadelphia 76ers",2022-03-16 19:00:00,"Upper Bowl",36.44
+"482","2021-22","Cavaliers vs. Denver Nuggets",2022-03-18 19:30:00,"Upper Bowl",23.9
+"483","2021-22","Cavaliers vs. Detroit Pistons",2022-03-19 20:00:00,"Upper Bowl",27.21
+"484","2021-22","Cavaliers vs. Los Angeles Lakers",2022-03-21 19:00:00,"Upper Bowl",79.71
+"485","2021-22","Cavaliers vs. Chicago Bulls",2022-03-26 20:00:00,"Upper Bowl",37.38
+"486","2021-22","Cavaliers vs. Orlando Magic",2022-03-28 19:00:00,"Upper Bowl",18
+"487","2021-22","Cavaliers vs. Dallas Mavericks",2022-03-30 19:00:00,"Upper Bowl",34.14
+"488","2021-22","Cavaliers vs. Philadelphia 76ers",2022-04-03 18:00:00,"Upper Bowl",34.03
+"489","2021-22","Cavaliers vs. Milwaukee Bucks",2022-04-10 15:30:00,"Upper Bowl",32.89
+"490","2022-23","Cavaliers vs. Philadelphia 76ers",2022-10-10 19:00:00,"Upper Bowl",9.18
+"491","2022-23","Cavaliers vs. Atlanta Hawks",2022-10-12 19:00:00,"Upper Bowl",7.03
+"492","2022-23","Cavaliers vs. Washington Wizards",2022-10-23 19:00:00,"Upper Bowl",35.01
+"493","2022-23","Cavaliers vs. Orlando Magic",2022-10-26 19:00:00,"Upper Bowl",21.26
+"494","2022-23","Cavaliers vs. New York Knicks",2022-10-30 18:00:00,"Upper Bowl",21.05
+"495","2022-23","Cavaliers vs. Boston Celtics",2022-11-02 19:30:00,"Upper Bowl",30.11
+"496","2022-23","Cavaliers vs. Minnesota Timberwolves",2022-11-13 18:00:00,"Upper Bowl",28.18
+"497","2022-23","Cavaliers vs. Charlotte Hornets",2022-11-18 19:30:00,"Upper Bowl",22.93
+"498","2022-23","Cavaliers vs. Miami Heat",2022-11-20 19:00:00,"Upper Bowl",30.45
+"499","2022-23","Cavaliers vs. Atlanta Hawks",2022-11-21 19:00:00,"Upper Bowl",20.32
+"500","2022-23","Cavaliers vs. Portland Trail Blazers",2022-11-23 19:00:00,"Upper Bowl",36.01
+"501","2022-23","Cavaliers vs. Philadelphia 76ers",2022-11-30 19:00:00,"Upper Bowl",28.31
+"502","2022-23","Cavaliers vs. Orlando Magic",2022-12-02 19:30:00,"Upper Bowl",26.82
+"503","2022-23","Cavaliers vs. Los Angeles Lakers",2022-12-06 19:30:00,"Upper Bowl",69.89
+"504","2022-23","Cavaliers vs. Sacramento Kings",2022-12-09 19:30:00,"Upper Bowl",20.75
+"505","2022-23","Cavaliers vs. Oklahoma City Thunder",2022-12-10 19:30:00,"Upper Bowl",29.05
+"506","2022-23","Cavaliers vs. Indiana Pacers",2022-12-16 19:30:00,"Upper Bowl",20.72
+"507","2022-23","Cavaliers vs. Dallas Mavericks",2022-12-17 20:00:00,"Upper Bowl",37.95
+"508","2022-23","Cavaliers vs. Utah Jazz",2022-12-19 19:00:00,"Upper Bowl",26.75
+"509","2022-23","Cavaliers vs. Milwaukee Bucks",2022-12-21 19:00:00,"Upper Bowl",38.24
+"510","2022-23","Cavaliers vs. Toronto Raptors",2022-12-23 19:30:00,"Upper Bowl",37.61
+"511","2022-23","Cavaliers vs. Brooklyn Nets",2022-12-26 19:00:00,"Upper Bowl",69.63
+"512","2022-23","Cavaliers vs. Chicago Bulls",2023-01-02 19:00:00,"Upper Bowl",31.49
+"513","2022-23","Cavaliers vs. Phoenix Suns",2023-01-04 19:00:00,"Upper Bowl",31.33
+"514","2022-23","Cavaliers vs. New Orleans Pelicans",2023-01-16 15:00:00,"Upper Bowl",38.77
