@@ -45,8 +45,8 @@ def get_game_stats(game_url):
 
     gameStats = {}
 
-    ###### Cavs Record
-    ###### Opponent Record
+    # Cavs Record
+    # Opponent Record
     scores = soup.find_all("div", {"class": "scores"})
     for score in scores:
         if score is not None:
@@ -71,19 +71,34 @@ def get_game_stats(game_url):
     # Opponent Roster
     # Cavs Stats
     # Opponent Stats
-    table = soup.find(
-        "table",
-        {"id": "box-" + gameStats["opponent"]["teamAbr"] + "-game-advanced"},
-    )
+    # opponentsAdvancedStats = pd.read_html(
+    #     str(
+    #         soup.find(
+    #             "table",
+    #             {"id": "box-" + gameStats["opponent"]["teamAbr"] + "-game-advanced"},
+    #         )
+    #     )
+    # )[0]
+    # opponentsAdvancedStats.columns = [str(s) for s in opponentsAdvancedStats.columns]
+    # cavsAdvancedStats = pd.read_html(
+    #     str(soup.find("table", {"id": "box-CLE-game-advanced"}))
+    # )[0]
 
-    stats = pd.read_html(str(table))[0]
-    stats_dict = stats.to_dict()
+    # print(opponentsAdvancedStats.columns.to_list())
+
+    # # Get index of reserve row and split table
+    # opponentsReservesIndex = opponentsAdvancedStats.index[
+    #     opponentsAdvancedStats["('Unnamed: 0_level_0', 'Starters')"] == "Reserves"
+    # ].tolist()[0]
+
+    # print(opponentsReservesIndex)
+
+    # stats = pd.read_html(str(table))[0]
+    # print(stats)
+    # stats_dict = stats.to_dict()
     # print(stats_dict)
 
-    # print(stats)
-
     # Inactive Players
-
     gameStats["cavs"]["inactive"] = []
     gameStats["opponent"]["inactive"] = []
 
@@ -117,16 +132,13 @@ def get_game_stats(game_url):
     inactiveString = soup.find("strong", text=re.compile("Time of Game:")).parent.text
     gameStats["length"] = inactiveString.split("Time of Game:")[1].strip()
 
+    # DateTime of Game
     box = soup.find("div", {"class": "scorebox_meta"})
-    #Time of Game 
-    gameStats["time"] = box.text.strip().split(",")[0]
-    #Date of Game
-    gameStats["date"] = box.text.strip().split(",")[1]
-    #NEED ADD REGEX FIX HERE TO GET YEAR FROM SCOREBOX
-    date = gameStats["date"].strip() + ", " + str(2020) 
-    gameStats["date"] = date
-    #Day of week
-    gameStats["dotw"] = datetime.datetime.strptime(date, '%B %d, %Y').strftime('%A')
+    dateTime = [i.text.strip() for i in box.select("div:first-child")][0]
+    time = dateTime.split(",")[0]
+    date = dateTime.split(",")[1] + "," + dateTime.split(",")[2]
+    dateTime = (date + " " + time).strip()
+    gameStats["time"] = datetime.datetime.strptime(dateTime, "%B %d, %Y %I:%M %p")
 
     print(gameStats)
 
