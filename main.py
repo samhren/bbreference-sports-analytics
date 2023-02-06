@@ -60,7 +60,6 @@ def get_game_urls(season_url):
     links = []
     for game in game_links:
         links.append("https://www.basketball-reference.com" + game["href"])
-    print(links)
     return links
 
 
@@ -223,7 +222,7 @@ def main():
             time.sleep(api_call_delay)
 
         # Save to file
-        with open(f"data/scrapeData/CAVS_{season}.json", "w") as f:
+        with open(f"data/scrapeData/CAVS_{season}.json", "w+") as f:
             json.dump(
                 currSeasonGames,
                 f,
