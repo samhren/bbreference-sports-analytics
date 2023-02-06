@@ -27,6 +27,11 @@ def get_seasons():
     return seasons
 
 
+# Remove all non-ascii characters
+def remove_non_ascii(text):
+    return str(text).encode("ascii", "ignore").decode()
+
+
 # Convert dataframe to list of dicts
 def dataframe_to_list_of_dicts(df):
 
@@ -36,13 +41,13 @@ def dataframe_to_list_of_dicts(df):
         for col in df.columns:
             if col == "('Unnamed: 0_level_0', 'Starters')":
                 # Removes all non-ascii characters
-                dict["name"] = str(row[col]).encode("ascii", "ignore").decode()
+                dict["name"] = remove_non_ascii(row[col])
             else:
                 colName = col.replace("('Advanced Box Score Stats', '", "").replace(
                     "')", ""
                 )
                 # Removes all non-ascii characters
-                dict[colName] = str(row[col]).encode("ascii", "ignore").decode()
+                dict[colName] = remove_non_ascii(row[col])
 
         data.append(dict)
     return data
@@ -86,15 +91,15 @@ def get_game_stats(game_url):
             record = score.parent.find("div", text=re.compile("-")).text.strip()
             if teamName != TEAM_NAME:
                 gameStats["opponent"] = {
-                    "name": teamName,
-                    "record": record,
-                    "teamAbr": teamAbr,
+                    "name": remove_non_ascii(teamName),
+                    "record": remove_non_ascii(record),
+                    "teamAbr": remove_non_ascii(teamAbr),
                 }
             else:
                 gameStats["cavs"] = {
-                    "name": teamName,
-                    "record": record,
-                    "teamAbr": teamAbr,
+                    "name": remove_non_ascii(teamName),
+                    "record": remove_non_ascii(record),
+                    "teamAbr": remove_non_ascii(teamAbr),
                 }
 
     # Opponent Roster
@@ -145,18 +150,22 @@ def get_game_stats(game_url):
     for inactive in cavsInactive:
         inactive = inactive.strip().replace("\xa0", "")
         if inactive != "":
-            gameStats["cavs"]["inactive"].append(inactive)
+            gameStats["cavs"]["inactive"].append(remove_non_ascii(inactive))
     for inactive in opponentInactive:
         inactive = inactive.strip().replace("\xa0", "")
         if inactive != "":
-            gameStats["opponent"]["inactive"].append(inactive)
+            gameStats["opponent"]["inactive"].append(remove_non_ascii(inactive))
 
     # Attendance
     inactiveString = soup.find("strong", text=re.compile("Attendance:")).parent.text
-    gameStats["attendance"] = inactiveString.split("Attendance:")[1].strip()
+    gameStats["attendance"] = remove_non_ascii(
+        inactiveString.split("Attendance:")[1].strip()
+    )
     # Length of Game
     inactiveString = soup.find("strong", text=re.compile("Time of Game:")).parent.text
-    gameStats["length"] = inactiveString.split("Time of Game:")[1].strip()
+    gameStats["length"] = remove_non_ascii(
+        inactiveString.split("Time of Game:")[1].strip()
+    )
 
     # DateTime of Game
     box = soup.find("div", {"class": "scorebox_meta"})
@@ -171,10 +180,10 @@ def get_game_stats(game_url):
 
     # Location of Game
     location = [i.text.strip() for i in box.select("div:nth-child(2)")][0]
-    gameStats["location"] = location
+    gameStats["location"] = remove_non_ascii(location)
 
     # Game ID
-    gameStats["gameID"] = game_url.split("/")[4].split(".")[0]
+    gameStats["gameID"] = remove_non_ascii(game_url.split("/")[4].split(".")[0])
 
     # Game URL
     gameStats["gameURL"] = game_url
@@ -188,9 +197,9 @@ def get_game_stats(game_url):
         if score is not None:
             teamName = score.parent.parent.find("strong").text.strip()
             if teamName != TEAM_NAME:
-                gameStats["opponent"]["score"] = score.text.strip()
+                gameStats["opponent"]["score"] = remove_non_ascii(score.text.strip())
             else:
-                gameStats["cavs"]["score"] = score.text.strip()
+                gameStats["cavs"]["score"] = remove_non_ascii(score.text.strip())
 
     return gameStats
 
@@ -231,6 +240,8 @@ def main():
                 default=str,
                 ignore_nan=True,
             )
+
+        print(f"Finished {season['year']}")
 
 
 # with open("gameStats.json", "w") as f:
