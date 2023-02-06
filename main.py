@@ -23,7 +23,7 @@ def get_seasons():
             + str(i)
             + "_games.html"
         )
-        seasons.append(SEASON_URL)
+        seasons.append({"url": SEASON_URL, "year": str(i)})
     return seasons
 
 
@@ -206,11 +206,12 @@ def main():
     time.sleep(60)
 
     seasons = get_seasons()
+    print(seasons)
     for season in seasons:
         currSeasonGames = []
 
         # 1 API Call
-        games = get_game_urls(season)
+        games = get_game_urls(season["url"])
         api_call_count += 1
         time.sleep(api_call_delay)
         for game in games:
@@ -222,7 +223,7 @@ def main():
             time.sleep(api_call_delay)
 
         # Save to file
-        with open(f"data/scrapeData/CAVS_{season}.json", "w+") as f:
+        with open(f"data/scrapeData/CAVS_{season['year']}.json", "w+") as f:
             json.dump(
                 currSeasonGames,
                 f,
