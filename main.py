@@ -1,4 +1,6 @@
+import simplejson as json
 import re
+import time
 from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
@@ -7,11 +9,8 @@ import datetime
 
 TEAM = "CLE"
 TEAM_NAME = "Cleveland Cavaliers"
-TEAM_UTL = "https://www.basketball-reference.com/teams/" + TEAM
+START_SEASONS = 2010
 END_SEASONS = 2023
-START_SEASONS = 2023
-
-SEASON_URL = "https://www.basketball-reference.com/teams/" + TEAM + "/SEASON_games.html"
 
 # Get list of season urls
 def get_seasons():
@@ -21,44 +20,57 @@ def get_seasons():
             "https://www.basketball-reference.com/teams/"
             + TEAM
             + "/"
-            + i
+            + str(i)
             + "_games.html"
         )
         seasons.append(SEASON_URL)
     return seasons
 
 
-# Get list of game urls using BeautifulSoup
-def get_game_urls(season_url):
-    request = requests.get(season_url)
-    soup = BeautifulSoup(request.content, "html5lib")
-    game_links = soup.findAll("a", href=True, text="Box Score")
-    links = []
-    for game in game_links:
-        links.append("https://www.basketball-reference.com/" + game["href"])
-    print(links)
-
-
+# Convert dataframe to list of dicts
 def dataframe_to_list_of_dicts(df):
+
     data = []
     for index, row in df.iterrows():
         dict = {}
         for col in df.columns:
             if col == "('Unnamed: 0_level_0', 'Starters')":
-                dict["name"] = row[col]
+                # Removes all non-ascii characters
+                dict["name"] = str(row[col]).encode("ascii", "ignore").decode()
             else:
                 colName = col.replace("('Advanced Box Score Stats', '", "").replace(
                     "')", ""
                 )
-                dict[colName] = row[col]
+                # Removes all non-ascii characters
+                dict[colName] = str(row[col]).encode("ascii", "ignore").decode()
 
         data.append(dict)
     return data
 
 
+# Get list of game urls using BeautifulSoup
+# USES 1 API CALL
+def get_game_urls(season_url):
+    request = requests.get(season_url)
+    if request.status_code != 200:
+        print("Error: " + str(request.status_code), "Season URL: " + season_url)
+        quit()
+    soup = BeautifulSoup(request.content, "html5lib")
+    game_links = soup.findAll("a", href=True, text="Box Score")
+    links = []
+    for game in game_links:
+        links.append("https://www.basketball-reference.com" + game["href"])
+    print(links)
+    return links
+
+
 # Get game stats using BeautifulSoup
+# USES 1 API CALL
 def get_game_stats(game_url):
     request = requests.get(game_url)
+    if request.status_code != 200:
+        print("Error: " + str(request.status_code), "Game URL: " + game_url)
+        quit()
     soup = BeautifulSoup(request.content, "html5lib")
 
     gameStats = {}
@@ -121,12 +133,12 @@ def get_game_stats(game_url):
     cavsInactive = inactiveString.split("CLE")[1]
     opponentInactive = inactiveString.split(gameStats["opponent"]["teamAbr"])[1]
     if gameStats["opponent"]["teamAbr"] in cavsInactive:
-        cavsInactive = cavsInactive.split(gameStats["opponent"]["teamAbr"])[0].split(
-            ","
-        )
         opponentInactive = cavsInactive.split(gameStats["opponent"]["teamAbr"])[
             1
         ].split(",")
+        cavsInactive = cavsInactive.split(gameStats["opponent"]["teamAbr"])[0].split(
+            ","
+        )
     else:
         cavsInactive = inactiveString.split("CLE")[1].split(",")
         opponentInactive = opponentInactive.split("CLE")[0].split(",")
@@ -153,24 +165,86 @@ def get_game_stats(game_url):
     time = dateTime.split(",")[0]
     date = dateTime.split(",")[1] + "," + dateTime.split(",")[2]
     dateTime = (date + " " + time).strip()
-    gameStats["time"] = datetime.datetime.strptime(dateTime, "%B %d, %Y %I:%M %p")
+    gameStats["dateTime"] = datetime.datetime.strptime(dateTime, "%B %d, %Y %I:%M %p")
 
-    print(gameStats)
+    # Day of Week
+    gameStats["dayOfWeek"] = gameStats["dateTime"].strftime("%A")
+
+    # Location of Game
+    location = [i.text.strip() for i in box.select("div:nth-child(2)")][0]
+    gameStats["location"] = location
+
+    # Game ID
+    gameStats["gameID"] = game_url.split("/")[4].split(".")[0]
+
+    # Game URL
+    gameStats["gameURL"] = game_url
+
+    # Add against to gameStats
+    gameStats["against"] = gameStats["opponent"]["teamAbr"]
+
+    # Game Result
+    scores = soup.find_all("div", {"class": "score"})
+    for score in scores:
+        if score is not None:
+            teamName = score.parent.parent.find("strong").text.strip()
+            if teamName != TEAM_NAME:
+                gameStats["opponent"]["score"] = score.text.strip()
+            else:
+                gameStats["cavs"]["score"] = score.text.strip()
+
+    return gameStats
 
 
-get_game_stats("https://www.basketball-reference.com/boxscores/202002290CLE.html")
+# MAIN MUST USE LESS THAN 20 API CALLS PER MINUTE
+# 60 / 20 = 3 seconds between calls
+# 3.5 seconds for safety
+# Sleep 1 minute before starting
+def main():
+    api_call_delay = 3.5
+    api_call_count = 0
+
+    time.sleep(60)
+
+    seasons = get_seasons()
+    for season in seasons:
+        currSeasonGames = []
+
+        # 1 API Call
+        games = get_game_urls(season)
+        api_call_count += 1
+        time.sleep(api_call_delay)
+        for game in games:
+
+            # 1 API Call
+            gameStats = get_game_stats(game)
+            currSeasonGames.append(gameStats)
+            api_call_count += 1
+            time.sleep(api_call_delay)
+
+        # Save to file
+        with open(f"data/scrapeData/CAVS_{season}.json", "w") as f:
+            json.dump(
+                currSeasonGames,
+                f,
+                indent=4,
+                sort_keys=True,
+                default=str,
+                ignore_nan=True,
+            )
 
 
-# Scrape seasons get list of urls
+# with open("gameStats.json", "w") as f:
+#     json.dump(
+#         get_game_stats(
+#             "https://www.basketball-reference.com/boxscores/201002210ORL.html"
+#         ),
+#         f,
+#         indent=4,
+#         sort_keys=True,
+#         default=str,
+#         ignore_nan=True,
+#     )
 
-# For each season
-# Save List of Games URL
-
-# For each season
-### For each game:
-###### Cavs Record
-###### Opponent Record
-###### Cavs Roster
-###### Opponent Roster
-###### Cavs Stats
-###### Opponent Stats
+if __name__ == "__main__":
+    main()
