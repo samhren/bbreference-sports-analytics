@@ -206,7 +206,6 @@ def main():
     time.sleep(60)
 
     seasons = get_seasons()
-    print(seasons)
     for season in seasons:
         currSeasonGames = []
 
