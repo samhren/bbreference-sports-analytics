@@ -1,5 +1,6 @@
 import re
 from bs4 import BeautifulSoup
+import numpy as np
 import pandas as pd
 import requests
 import datetime
@@ -38,6 +39,23 @@ def get_game_urls(season_url):
     print(links)
 
 
+def dataframe_to_list_of_dicts(df):
+    data = []
+    for index, row in df.iterrows():
+        dict = {}
+        for col in df.columns:
+            if col == "('Unnamed: 0_level_0', 'Starters')":
+                dict["name"] = row[col]
+            else:
+                colName = col.replace("('Advanced Box Score Stats', '", "").replace(
+                    "')", ""
+                )
+                dict[colName] = row[col]
+
+        data.append(dict)
+    return data
+
+
 # Get game stats using BeautifulSoup
 def get_game_stats(game_url):
     request = requests.get(game_url)
@@ -67,36 +85,33 @@ def get_game_stats(game_url):
                     "record": record,
                     "teamAbr": teamAbr,
                 }
-    # Cavs Roster
+
     # Opponent Roster
-    # Cavs Stats
     # Opponent Stats
-    # opponentsAdvancedStats = pd.read_html(
-    #     str(
-    #         soup.find(
-    #             "table",
-    #             {"id": "box-" + gameStats["opponent"]["teamAbr"] + "-game-advanced"},
-    #         )
-    #     )
-    # )[0]
-    # opponentsAdvancedStats.columns = [str(s) for s in opponentsAdvancedStats.columns]
-    # cavsAdvancedStats = pd.read_html(
-    #     str(soup.find("table", {"id": "box-CLE-game-advanced"}))
-    # )[0]
+    opponentsAdvancedStats = pd.read_html(
+        str(
+            soup.find(
+                "table",
+                {"id": "box-" + gameStats["opponent"]["teamAbr"] + "-game-advanced"},
+            )
+        )
+    )[0]
+    opponentsAdvancedStats.columns = [str(s) for s in opponentsAdvancedStats.columns]
 
-    # print(opponentsAdvancedStats.columns.to_list())
+    # Get index of reserve row and split table
+    opponentsReservesIndex = opponentsAdvancedStats.index[
+        opponentsAdvancedStats["('Unnamed: 0_level_0', 'Starters')"] == "Reserves"
+    ].tolist()[0]
 
-    # # Get index of reserve row and split table
-    # opponentsReservesIndex = opponentsAdvancedStats.index[
-    #     opponentsAdvancedStats["('Unnamed: 0_level_0', 'Starters')"] == "Reserves"
-    # ].tolist()[0]
+    opponentsReserves = np.split(opponentsAdvancedStats, [opponentsReservesIndex])[1]
+    opponentsReserves.drop(opponentsReserves.tail(1).index, inplace=True)
+    opponentsReserves.drop(opponentsReserves.head(1).index, inplace=True)
 
-    # print(opponentsReservesIndex)
+    opponentsStarters = np.split(opponentsAdvancedStats, [opponentsReservesIndex])[0]
 
-    # stats = pd.read_html(str(table))[0]
-    # print(stats)
-    # stats_dict = stats.to_dict()
-    # print(stats_dict)
+    # Convert to list of dicts and add to gameStats
+    gameStats["opponent"]["reserves"] = dataframe_to_list_of_dicts(opponentsReserves)
+    gameStats["opponent"]["starters"] = dataframe_to_list_of_dicts(opponentsStarters)
 
     # Inactive Players
     gameStats["cavs"]["inactive"] = []
