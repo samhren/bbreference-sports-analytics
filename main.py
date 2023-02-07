@@ -84,11 +84,20 @@ def get_game_stats(game_url):
     scores = soup.find_all("div", {"class": "scores"})
     for score in scores:
         if score is not None:
-            teamName = score.parent.find("strong").text.strip()
-            teamAbr = (
-                score.parent.find("strong").find("a")["href"].split("/")[2].strip()
-            )
-            record = score.parent.find("div", text=re.compile("-")).text.strip()
+            try:
+                teamName = score.parent.find("strong").text.strip()
+            except:
+                teamName = "N/A"
+            try:
+                teamAbr = (
+                    score.parent.find("strong").find("a")["href"].split("/")[2].strip()
+                )
+            except:
+                teamAbr = "N/A"
+            try:
+                record = score.parent.find("div", text=re.compile("-")).text.strip()
+            except:
+                record = "N/A"
             if teamName != TEAM_NAME:
                 gameStats["opponent"] = {
                     "name": remove_non_ascii(teamName),
@@ -133,57 +142,80 @@ def get_game_stats(game_url):
     gameStats["cavs"]["inactive"] = []
     gameStats["opponent"]["inactive"] = []
 
-    inactiveString = soup.find("strong", text=re.compile("Inactive:")).parent.text
-    cavsInactive = inactiveString.split("CLE")[1]
-    opponentInactive = inactiveString.split(gameStats["opponent"]["teamAbr"])[1]
-    if gameStats["opponent"]["teamAbr"] in cavsInactive:
-        opponentInactive = cavsInactive.split(gameStats["opponent"]["teamAbr"])[
-            1
-        ].split(",")
-        cavsInactive = cavsInactive.split(gameStats["opponent"]["teamAbr"])[0].split(
-            ","
-        )
-    else:
-        cavsInactive = inactiveString.split("CLE")[1].split(",")
-        opponentInactive = opponentInactive.split("CLE")[0].split(",")
+    try:
+        inactiveString = soup.find("strong", text=re.compile("Inactive:")).parent.text
+        cavsInactive = inactiveString.split("CLE")[1]
+        opponentInactive = inactiveString.split(gameStats["opponent"]["teamAbr"])[1]
+        if gameStats["opponent"]["teamAbr"] in cavsInactive:
+            opponentInactive = cavsInactive.split(gameStats["opponent"]["teamAbr"])[
+                1
+            ].split(",")
+            cavsInactive = cavsInactive.split(gameStats["opponent"]["teamAbr"])[
+                0
+            ].split(",")
+        else:
+            cavsInactive = inactiveString.split("CLE")[1].split(",")
+            opponentInactive = opponentInactive.split("CLE")[0].split(",")
 
-    for inactive in cavsInactive:
-        inactive = inactive.strip().replace("\xa0", "")
-        if inactive != "":
-            gameStats["cavs"]["inactive"].append(remove_non_ascii(inactive))
-    for inactive in opponentInactive:
-        inactive = inactive.strip().replace("\xa0", "")
-        if inactive != "":
-            gameStats["opponent"]["inactive"].append(remove_non_ascii(inactive))
+        for inactive in cavsInactive:
+            inactive = inactive.strip().replace("\xa0", "")
+            if inactive != "":
+                gameStats["cavs"]["inactive"].append(remove_non_ascii(inactive))
+        for inactive in opponentInactive:
+            inactive = inactive.strip().replace("\xa0", "")
+            if inactive != "":
+                gameStats["opponent"]["inactive"].append(remove_non_ascii(inactive))
+    except:
+        gameStats["cavs"]["inactive"] = []
+        gameStats["opponent"]["inactive"] = []
 
     # Attendance
-    inactiveString = soup.find("strong", text=re.compile("Attendance:")).parent.text
-    gameStats["attendance"] = remove_non_ascii(
-        inactiveString.split("Attendance:")[1].strip()
-    )
+    try:
+        inactiveString = soup.find("strong", text=re.compile("Attendance:")).parent.text
+        gameStats["attendance"] = remove_non_ascii(
+            inactiveString.split("Attendance:")[1].strip()
+        )
+    except:
+        gameStats["attendance"] = "N/A"
+
     # Length of Game
-    inactiveString = soup.find("strong", text=re.compile("Time of Game:")).parent.text
-    gameStats["length"] = remove_non_ascii(
-        inactiveString.split("Time of Game:")[1].strip()
-    )
+    try:
+        inactiveString = soup.find(
+            "strong", text=re.compile("Time of Game:")
+        ).parent.text
+        gameStats["length"] = remove_non_ascii(
+            inactiveString.split("Time of Game:")[1].strip()
+        )
+    except:
+        gameStats["length"] = "N/A"
 
     # DateTime of Game
-    box = soup.find("div", {"class": "scorebox_meta"})
-    dateTime = [i.text.strip() for i in box.select("div:first-child")][0]
-    time = dateTime.split(",")[0]
-    date = dateTime.split(",")[1] + "," + dateTime.split(",")[2]
-    dateTime = (date + " " + time).strip()
-    gameStats["dateTime"] = datetime.datetime.strptime(dateTime, "%B %d, %Y %I:%M %p")
-
-    # Day of Week
-    gameStats["dayOfWeek"] = gameStats["dateTime"].strftime("%A")
+    try:
+        box = soup.find("div", {"class": "scorebox_meta"})
+        dateTime = [i.text.strip() for i in box.select("div:first-child")][0]
+        time = dateTime.split(",")[0]
+        date = dateTime.split(",")[1] + "," + dateTime.split(",")[2]
+        dateTime = (date + " " + time).strip()
+        gameStats["dateTime"] = datetime.datetime.strptime(
+            dateTime, "%B %d, %Y %I:%M %p"
+        )
+        gameStats["dayOfWeek"] = gameStats["dateTime"].strftime("%A")
+    except:
+        gameStats["dateTime"] = "N/A"
+        gameStats["dayOfWeek"] = "N/A"
 
     # Location of Game
-    location = [i.text.strip() for i in box.select("div:nth-child(2)")][0]
-    gameStats["location"] = remove_non_ascii(location)
+    try:
+        location = [i.text.strip() for i in box.select("div:nth-child(2)")][0]
+        gameStats["location"] = remove_non_ascii(location)
+    except:
+        gameStats["location"] = "N/A"
 
     # Game ID
-    gameStats["gameID"] = remove_non_ascii(game_url.split("/")[4].split(".")[0])
+    try:
+        gameStats["gameID"] = remove_non_ascii(game_url.split("/")[4].split(".")[0])
+    except:
+        gameStats["gameID"] = "N/A"
 
     # Game URL
     gameStats["gameURL"] = game_url
@@ -192,14 +224,20 @@ def get_game_stats(game_url):
     gameStats["against"] = gameStats["opponent"]["teamAbr"]
 
     # Game Result
-    scores = soup.find_all("div", {"class": "score"})
-    for score in scores:
-        if score is not None:
-            teamName = score.parent.parent.find("strong").text.strip()
-            if teamName != TEAM_NAME:
-                gameStats["opponent"]["score"] = remove_non_ascii(score.text.strip())
-            else:
-                gameStats["cavs"]["score"] = remove_non_ascii(score.text.strip())
+    try:
+        scores = soup.find_all("div", {"class": "score"})
+        for score in scores:
+            if score is not None:
+                teamName = score.parent.parent.find("strong").text.strip()
+                if teamName != TEAM_NAME:
+                    gameStats["opponent"]["score"] = remove_non_ascii(
+                        score.text.strip()
+                    )
+                else:
+                    gameStats["cavs"]["score"] = remove_non_ascii(score.text.strip())
+    except:
+        gameStats["cavs"]["score"] = "N/A"
+        gameStats["opponent"]["score"] = "N/A"
 
     return gameStats
 
@@ -225,7 +263,12 @@ def main():
         for game in games:
 
             # 1 API Call
-            gameStats = get_game_stats(game)
+            try:
+                gameStats = get_game_stats(game)
+            except Exception as e:
+                print(e)
+                print(game)
+                quit()
             currSeasonGames.append(gameStats)
             api_call_count += 1
             time.sleep(api_call_delay)
