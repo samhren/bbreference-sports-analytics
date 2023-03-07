@@ -43,14 +43,25 @@ def dataframe_to_list_of_dicts(df):
                 # Removes all non-ascii characters
                 dict["name"] = remove_non_ascii(row[col])
             else:
-                colName = col.replace("('Advanced Box Score Stats', '", "").replace(
-                    "')", ""
+                colName = (
+                    col.replace("('Advanced Box Score Stats', '", "")
+                    .replace("')", "")
+                    .replace("('Basic Box Score Stats', '", "")
                 )
                 # Removes all non-ascii characters
                 dict[colName] = remove_non_ascii(row[col])
 
         data.append(dict)
     return data
+
+
+def merge_two_lists_of_dicts(list1, list2):
+    for player in list1:
+        for player2 in list2:
+            if player["name"] == player2["name"]:
+                player.update(player2)
+
+    return list1
 
 
 # Get list of game urls using BeautifulSoup
@@ -134,9 +145,103 @@ def get_game_stats(game_url):
 
     opponentsStarters = np.split(opponentsAdvancedStats, [opponentsReservesIndex])[0]
 
-    # Convert to list of dicts and add to gameStats
-    gameStats["opponent"]["reserves"] = dataframe_to_list_of_dicts(opponentsReserves)
-    gameStats["opponent"]["starters"] = dataframe_to_list_of_dicts(opponentsStarters)
+    # Cavs Roster
+    # Cavs Stats
+    cavsAdvancedStats = pd.read_html(
+        str(
+            soup.find(
+                "table",
+                {"id": "box-" + gameStats["cavs"]["teamAbr"] + "-game-advanced"},
+            )
+        )
+    )[0]
+    cavsAdvancedStats.columns = [str(s) for s in cavsAdvancedStats.columns]
+
+    # Get index of reserve row and split table
+    cavsReservesIndex = cavsAdvancedStats.index[
+        cavsAdvancedStats["('Unnamed: 0_level_0', 'Starters')"] == "Reserves"
+    ].tolist()[0]
+
+    cavsReserves = np.split(cavsAdvancedStats, [cavsReservesIndex])[1]
+    cavsReserves.drop(cavsReserves.tail(1).index, inplace=True)
+    cavsReserves.drop(cavsReserves.head(1).index, inplace=True)
+
+    cavsStarters = np.split(cavsAdvancedStats, [cavsReservesIndex])[0]
+
+    # Convert to list of dicts
+    opponentsReservesAdv = dataframe_to_list_of_dicts(opponentsReserves)
+    opponentsStartersAdv = dataframe_to_list_of_dicts(opponentsStarters)
+    cavsReservesAdv = dataframe_to_list_of_dicts(cavsReserves)
+    cavsStartersAdv = dataframe_to_list_of_dicts(cavsStarters)
+
+    # Repeat with basic stats
+    opponentsBasicStats = pd.read_html(
+        str(
+            soup.find(
+                "table",
+                {"id": "box-" + gameStats["opponent"]["teamAbr"] + "-game-basic"},
+            )
+        )
+    )[0]
+    opponentsBasicStats.columns = [str(s) for s in opponentsBasicStats.columns]
+
+    # Get index of reserve row and split table
+    opponentsReservesIndex = opponentsBasicStats.index[
+        opponentsBasicStats["('Unnamed: 0_level_0', 'Starters')"] == "Reserves"
+    ].tolist()[0]
+
+    opponentsReserves = np.split(opponentsBasicStats, [opponentsReservesIndex])[1]
+    opponentsReserves.drop(opponentsReserves.tail(1).index, inplace=True)
+    opponentsReserves.drop(opponentsReserves.head(1).index, inplace=True)
+
+    opponentsStarters = np.split(opponentsBasicStats, [opponentsReservesIndex])[0]
+
+    # Cavs Roster
+    # Cavs Stats
+
+    cavsBasicStats = pd.read_html(
+        str(
+            soup.find(
+                "table",
+                {"id": "box-" + gameStats["cavs"]["teamAbr"] + "-game-basic"},
+            )
+        )
+    )[0]
+    cavsBasicStats.columns = [str(s) for s in cavsBasicStats.columns]
+
+    # Get index of reserve row and split table
+    cavsReservesIndex = cavsBasicStats.index[
+        cavsBasicStats["('Unnamed: 0_level_0', 'Starters')"] == "Reserves"
+    ].tolist()[0]
+
+    cavsReserves = np.split(cavsBasicStats, [cavsReservesIndex])[1]
+    cavsReserves.drop(cavsReserves.tail(1).index, inplace=True)
+    cavsReserves.drop(cavsReserves.head(1).index, inplace=True)
+
+    cavsStarters = np.split(cavsBasicStats, [cavsReservesIndex])[0]
+
+    # Convert to list of dicts
+    opponentsReservesBasic = dataframe_to_list_of_dicts(opponentsReserves)
+    opponentsStartersBasic = dataframe_to_list_of_dicts(opponentsStarters)
+    cavsReservesBasic = dataframe_to_list_of_dicts(cavsReserves)
+    cavsStartersBasic = dataframe_to_list_of_dicts(cavsStarters)
+
+    # Merge basic and advanced stats
+    opponentsReserves = merge_two_lists_of_dicts(
+        opponentsReservesBasic, opponentsReservesAdv
+    )
+    opponentsStarters = merge_two_lists_of_dicts(
+        opponentsStartersBasic, opponentsStartersAdv
+    )
+
+    cavsReserves = merge_two_lists_of_dicts(cavsReservesBasic, cavsReservesAdv)
+    cavsStarters = merge_two_lists_of_dicts(cavsStartersBasic, cavsStartersAdv)
+
+    # Add starters and reserves to gameStats
+    gameStats["opponent"]["starters"] = opponentsStarters
+    gameStats["opponent"]["reserves"] = opponentsReserves
+    gameStats["cavs"]["starters"] = cavsStarters
+    gameStats["cavs"]["reserves"] = cavsReserves
 
     # Inactive Players
     gameStats["cavs"]["inactive"] = []
@@ -278,7 +383,6 @@ def main():
             json.dump(
                 currSeasonGames,
                 f,
-                indent=4,
                 sort_keys=True,
                 default=str,
                 ignore_nan=True,
@@ -286,18 +390,6 @@ def main():
 
         print(f"Finished {season['year']}")
 
-
-# with open("gameStats.json", "w") as f:
-#     json.dump(
-#         get_game_stats(
-#             "https://www.basketball-reference.com/boxscores/201002210ORL.html"
-#         ),
-#         f,
-#         indent=4,
-#         sort_keys=True,
-#         default=str,
-#         ignore_nan=True,
-#     )
 
 if __name__ == "__main__":
     main()
